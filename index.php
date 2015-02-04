@@ -15,6 +15,8 @@ alredyOnline();
 
     <meta charset="utf-8">
     <title>OH#LOOK</title>
+
+    KISSE KATT
     
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
