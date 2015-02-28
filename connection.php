@@ -1,8 +1,8 @@
 <?php 
-    define("DB_HOST", "cpsrv03.misshosting.com");
-    define("DB_USER", "qvteyflu_admin");
-    define("DB_PASSWORD", "admin123");
-    define("DB_DATABASE", "qvteyflu_Twitter");
+    define("DB_HOST", "localhost");
+    define("DB_USER", "root");
+    define("DB_PASSWORD", "root");
+    define("DB_DATABASE", "Twitter");
 
     function getConnection() {
 	    

@@ -233,6 +233,30 @@ function newTweet() {
 		echo "<p class='Postat'>Något gick fel!</p>";
 	}
 	}
+}
+
+function ReplyTweet() {
+
+	if ($_SERVER["REQUEST_METHOD"] == "POST")
+	{
+
+	$TextArea = [];
+	$TextArea = filter_var($_POST['TextArea'], FILTER_SANITIZE_SPECIAL_CHARS); 
+
+		$id = getTweetInfo($_GET["tweetID"]);
+		$sql = "INSERT INTO reply_tweets (TextArea, user_id, reply_ID) 
+		VALUES ('$TextArea', '{$_SESSION['user']['ID']}', '{$id['ID']}')";
+
+	if (mysqli_query(getConnection(), $sql)) 
+	{
+		echo "<p class='Postat'>Ditt inlägg har postat!</p>";
+		$TextArea = $_POST["TextArea"] = null;
+		
+	}  
+	else {
+		echo "<p class='Postat'>Något gick fel!</p>";
+	}
+	}
 }	
 
 //Tweets som syns på ens profilsida
