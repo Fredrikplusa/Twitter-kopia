@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Feb 27, 2015 at 09:57 PM
+-- Generation Time: Feb 28, 2015 at 10:12 AM
 -- Server version: 5.5.34
 -- PHP Version: 5.5.10
 
@@ -34,7 +34,7 @@ CREATE TABLE `reply_tweets` (
   PRIMARY KEY (`ID`),
   KEY `reply_ID` (`reply_ID`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `reply_tweets`
@@ -43,7 +43,9 @@ CREATE TABLE `reply_tweets` (
 INSERT INTO `reply_tweets` (`TextArea`, `reply_ID`, `ID`, `user_id`) VALUES
 ('hej', 1, 3, 1),
 ('du suger', 1, 4, 3),
-('ny kommentar', 2, 6, 3);
+('ny kommentar', 2, 6, 3),
+('test', 1, 7, 1),
+('HALÅÅÅÅ!!', 34, 8, 1);
 
 -- --------------------------------------------------------
 
